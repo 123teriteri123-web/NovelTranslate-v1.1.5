@@ -1,0 +1,19 @@
+Chapter 1: The Beginning
+
+This is the first chapter of our test novel. It contains some basic content to test the chapter extraction functionality.
+
+Chapter 2: The Middle
+
+This is the second chapter. It should be properly detected by the chapter processing system.
+
+Chapter 3: The End
+
+This is the final chapter of our test novel. It completes the basic story structure.
+
+Chapter 4: Extra Content
+
+An additional chapter to test multiple chapter processing.
+
+Chapter 5: Final Chapter
+
+The last chapter to ensure we have enough content for testing both individual chapters and batch processing.

@@ -1,0 +1,8 @@
+Add EPUB support and batching for novel translation workflows
+
+Enable EPUB file uploads, extract content from EPUBs using ebooklib and BeautifulSoup, and implement chapter batching for processing. Update dependencies and the allowed file types in the dashboard.
+
+Replit-Commit-Author: Agent
+Replit-Commit-Session-Id: f342583b-0f07-4594-b29d-7719710b9609
+Replit-Commit-Checkpoint-Type: full_checkpoint
+Replit-Commit-Screenshot-Url: https://storage.googleapis.com/screenshot-production-us-central1/5b5e3076-a318-445d-899b-7903c0238735/f342583b-0f07-4594-b29d-7719710b9609/BfT6GH0

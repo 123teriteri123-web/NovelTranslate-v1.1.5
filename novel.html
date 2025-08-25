@@ -1,0 +1,30 @@
+
+{% extends "base.html" %}
+{% block title %}{{ novel.title }}{% endblock %}
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-3">
+  <h1 class="h3 mb-0">{{ novel.title }}</h1>
+  <form method="post" action="{{ url_for('export_epub', novel_id=novel.id) }}" onsubmit="event.preventDefault(); exportEpub();">
+    <button class="btn btn-outline-light">Export EPUB</button>
+  </form>
+</div>
+<div class="list-group">
+{% for ch in chapters %}
+  <a class="list-group-item list-group-item-action list-group-item-dark d-flex justify-content-between align-items-center" href="{{ url_for('view_chapter', novel_id=novel.id, order=ch.order) }}">
+    <span>#{{ ch.order }} — {{ ch.title or 'Untitled' }}</span>
+    <span class="badge bg-{{ 'success' if ch.translated_text else 'secondary' }}">{{ 'Translated' if ch.translated_text else 'Pending' }}</span>
+  </a>
+{% endfor %}
+</div>
+<script>
+async function exportEpub(){
+  const r = await fetch("{{ url_for('export_epub', novel_id=novel.id) }}", {method:"POST"});
+  const j = await r.json();
+  if(j.success){
+    window.location = "{{ url_for('download', rel='') }}" + j.path;
+  } else {
+    alert(j.error || "Export failed");
+  }
+}
+</script>
+{% endblock %}

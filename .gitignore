@@ -1,0 +1,30 @@
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Editor / OS files
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Replit
+.replit
+replit.nix
+
+# Logs
+*.log
+
+# Uploads / temp
+uploads/
+tmp/
